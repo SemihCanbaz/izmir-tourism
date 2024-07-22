@@ -1,0 +1,84 @@
+/* src/styles/Home.css */
+
+.container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f5f5f5; /* Ana sayfanın arka plan rengi */
+}
+
+/* src/styles/Home.css */
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+  background-image: url("/src/assets/izmir.jpeg"); /* Doğru yol */
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  padding: 60px 20px; /* Resmi kaplayacak şekilde padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-attachment: fixed; /* Arka planın sabit kalmasını sağlar */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Üzerine koyu bir renk ekleyerek yazıyı belirginleştirme */
+  border-radius: 8px;
+  z-index: 0;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.places {
+  margin-top: 20px;
+}
+
+.places h2 {
+  font-size: 2em;
+  color: #333;
+}
+
+/* 3D kart efekti için stil */
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Resim kartı stili */
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
