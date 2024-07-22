@@ -1,19 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "../styles/Header.css"; // Header için stil dosyasını içe aktarın
+import logoImg from "../assets/logo.jpg.webp"; // Logo resmini içe aktarın
 
 function Header() {
   return (
-    <header>
-      <h1>İzmir Turizm</h1>
-      <nav>
-        <ul>
-          <li>
-            <a href="/">Ana Sayfa</a>
-          </li>
-          <li>
-            <a href="/about">Hakkında</a>
-          </li>
-        </ul>
-      </nav>
+    <header className="header">
+      <div className="header-content">
+        <img src={logoImg} alt="İzmir Turizm Logo" className="logo" />
+        <nav>
+          <ul className="nav-links">
+            <li>
+              <Link to="/">Ana Sayfa</Link>
+            </li>
+            <li>
+              <Link to="/place">Turistik Yerler</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 }

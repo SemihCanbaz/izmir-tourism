@@ -1,20 +1,29 @@
 // src/pages/PlaceDetail.js
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import "../styles/PlaceDetail.css";
 
-function PlaceDetail({ places }) {
+function PlaceDetail() {
   const { id } = useParams();
-  const place = places.find((p) => p.id === parseInt(id));
+  const [place, setPlace] = useState(null);
 
-  if (!place) {
-    return <p>Yer bulunamadı.</p>;
-  }
+  useEffect(() => {
+    fetch("/data/places.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const foundPlace = data.find((p) => p.id === id);
+        setPlace(foundPlace);
+      })
+      .catch((error) => console.error("Error fetching place details:", error));
+  }, [id]);
+
+  if (!place) return <div>Loading...</div>;
 
   return (
-    <div>
-      <h2>{place.name}</h2>
+    <div className="place-detail">
+      <h1>{place.name}</h1>
       <p>{place.description}</p>
-      <p>Koordinatlar: {place.position.join(", ")}</p>
+      {/* Diğer detaylar ve harita gibi içerikler buraya eklenebilir */}
     </div>
   );
 }

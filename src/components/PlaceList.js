@@ -1,12 +1,13 @@
+// src/components/PlaceList.js
 import React from "react";
 import { Link } from "react-router-dom";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "../styles/PlaceList.css";
-import markerIcon from "../assets/marker-icon.png"; // Düzgün yol kullanın
+import markerIcon from "../assets/marker-icon.png"; 
 
-const locationIcon = new L.Icon({
+const customIcon = new L.Icon({
   iconUrl: markerIcon,
   iconSize: [25, 41],
   iconAnchor: [12, 41],
@@ -20,13 +21,9 @@ function PlaceList({ places }) {
       {places.map((place) => (
         <div key={place.id} className="place-item">
           <div className="map-container">
-            <MapContainer
-              center={place.position}
-              zoom={13}
-              style={{ height: "200px", width: "100%" }}
-            >
+            <MapContainer center={place.position} zoom={13} className="map">
               <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-              <Marker position={place.position} icon={locationIcon}>
+              <Marker position={place.position} icon={customIcon}>
                 <Popup>
                   <Link to={`/place/${place.id}`}>{place.name}</Link>
                 </Popup>
@@ -44,4 +41,4 @@ function PlaceList({ places }) {
   );
 }
 
-export default PlaceList; // Bu dosyada sadece bir `export default` olmalı
+export default PlaceList;

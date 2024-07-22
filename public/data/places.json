@@ -13,50 +13,50 @@
   },
   {
     "id": 3,
-    "name": "Konak Meydanı",
-    "description": "İzmir'in kalbi olarak bilinen meydan.",
-    "position": [38.4198, 27.1286]
+    "name": "Kadifekale",
+    "description": "İzmir'in tarihi kalesi.",
+    "position": [38.4192, 27.1428]
   },
   {
     "id": 4,
-    "name": "Kordon Boyu",
-    "description": "Deniz kenarında yürüyüş yapılabilecek güzel bir alan.",
-    "position": [38.4314, 27.1362]
+    "name": "Konak Meydanı",
+    "description": "Şehrin merkezi meydanı.",
+    "position": [38.4192, 27.1287]
   },
   {
     "id": 5,
-    "name": "Kadifekale",
-    "description": "İzmir'i kuşbakışı görebileceğiniz tarihi bir kale.",
-    "position": [38.4078, 27.1534]
+    "name": "Kordon Boyu",
+    "description": "İzmir'in popüler sahil şeridi.",
+    "position": [38.4292, 27.1358]
   },
   {
     "id": 6,
-    "name": "Agora",
-    "description": "Roma döneminden kalma antik pazar yeri.",
-    "position": [38.4192, 27.1439]
+    "name": "İzmir Arkeoloji Müzesi",
+    "description": "Zengin arkeolojik koleksiyonlara sahip müze.",
+    "position": [38.4292, 27.1368]
   },
   {
     "id": 7,
     "name": "Asansör",
-    "description": "Tarihi bir asansör yapısı ve muhteşem İzmir manzarası.",
-    "position": [38.4136, 27.1275]
+    "description": "İzmir'in tarihi asansörü.",
+    "position": [38.4192, 27.1287]
   },
   {
     "id": 8,
-    "name": "İzmir Doğal Yaşam Parkı",
-    "description": "Birçok hayvan türünü görebileceğiniz büyük bir park.",
-    "position": [38.5583, 26.9884]
+    "name": "Alaçatı",
+    "description": "Rüzgar sörfü ve taş evleri ile ünlü tatil beldesi.",
+    "position": [38.2843, 26.3745]
   },
   {
     "id": 9,
-    "name": "Bostanlı Pazarı",
-    "description": "İzmir'in en büyük ve popüler pazarlarından biri.",
-    "position": [38.4604, 27.0963]
+    "name": "Çeşme Kalesi",
+    "description": "Tarihi bir kale ve müze.",
+    "position": [38.3266, 26.3048]
   },
   {
     "id": 10,
-    "name": "İnciraltı Kent Ormanı",
-    "description": "Doğa ile iç içe olabileceğiniz büyük bir park.",
-    "position": [38.3931, 27.0312]
+    "name": "İzmir Saat Kulesi",
+    "description": "İzmir'in sembolik yapılarından biri.",
+    "position": [38.4192, 27.1287]
   }
 ]

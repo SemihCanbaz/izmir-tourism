@@ -1,24 +1,17 @@
 // src/App.js
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import PlaceDetail from "./pages/PlaceDetail";
+import Place from "./pages/Place";
+import Header from "./components/Header"; // Header bileşenini içe aktarın
 
 function App() {
-  const [places, setPlaces] = useState([]);
-
-  useEffect(() => {
-    fetch("/data/places.json")
-      .then((response) => response.json())
-      .then((data) => setPlaces(data))
-      .catch((error) => console.error("Error loading places data:", error));
-  }, []);
-
   return (
     <Router>
+      <Header />
       <Routes>
-        <Route path="/" element={<Home places={places} />} />
-        <Route path="/place/:id" element={<PlaceDetail places={places} />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/place" element={<Place />} />
       </Routes>
     </Router>
   );

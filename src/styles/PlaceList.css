@@ -1,41 +1,61 @@
-/* PlaceList.css */
+/* src/styles/PlaceList.css */
 .place-list {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin: 20px;
+  flex-wrap: wrap;
+  gap: 20px; /* Kartlar arasında boşluk bırakır */
+  justify-content: center; /* Kartları ortalar */
+  padding: 20px; /* Kenarlardan boşluk bırakır */
 }
 
 .place-item {
   display: flex;
   flex-direction: column;
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 5px;
-  align-items: center;
-  background-color: #f9f9f9;
+  width: calc(
+    33.333% - 20px
+  ); /* Aynı satırda 3 harita gösterir, boşluklar dikkate alınarak */
+  box-sizing: border-box;
+  border-radius: 10px; /* Kartların köşelerini yuvarlatır */
+  overflow: hidden; /* İçeriğin kartların dışına taşmasını engeller */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
 }
 
 .map-container {
+  position: relative;
   width: 100%;
-  margin-bottom: 10px;
+  padding-top: 75%; /* Aspect ratio 4:3 (daha yatay) */
+}
+
+.map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .place-info {
-  text-align: center;
+  padding: 15px;
+  background-color: #fff;
+  border-top: 1px solid #ddd; /* Üst sınır ekler */
+  border-radius: 0 0 10px 10px; /* Alt köşeleri yuvarlatır */
 }
 
 .place-info h3 {
-  margin: 0 0 5px;
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #333;
 }
 
 .place-info p {
   margin: 0 0 10px;
+  font-size: 1rem;
+  color: #666;
 }
 
 .place-info a {
-  color: blue;
+  color: #007bff;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .place-info a:hover {

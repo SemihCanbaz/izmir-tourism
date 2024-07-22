@@ -1,0 +1,58 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Şeffaf siyah arka plan */
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Diğer içeriklerin üstünde */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.logo {
+  height: 60px; /* Logo yüksekliğini ayarlayın */
+  margin: 0;
+  transform: rotate(-10deg); /* Logoyu yatık yapar */
+  transition: transform 0.3s, height 0.3s; /* Geçiş efektleri */
+}
+
+.logo:hover {
+  transform: rotate(0deg) scale(1.1); /* Üzerine gelindiğinde logoyu döndürür ve büyütür */
+  height: 66px; /* Büyüdüğünde yüksekliği artırır */
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 5px; /* Buton kenarlarını yuvarlatır */
+  transition: background-color 0.3s, color 0.3s; /* Hover geçiş efektleri */
+}
+
+.nav-links a:hover {
+  background-color: #333; /* Siyah arka plan */
+  color: #c0c0c0; /* Gümüş renk */
+}

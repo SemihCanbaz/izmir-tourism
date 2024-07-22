@@ -1,4 +1,21 @@
-/* Place.css */
-h2 {
-  margin-top: 0;
+/* src/styles/Place.css */
+.place-container {
+  padding: 20px;
+  background-color: #f8f9fa; /* Arka plan rengini açık gri yapar */
+}
+
+.place-header {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Şeffaf beyaz arka plan */
+  border-radius: 10px; /* Kenarları yuvarlat */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+  margin-bottom: 20px; /* Başlık ve içerik arasındaki boşluk */
+}
+
+.place-header p {
+  font-size: 1.2rem; /* Paragraf yazı boyutu */
+  color: #333; /* Paragraf rengi */
+  margin: 0;
+  line-height: 1.6; /* Satır yüksekliği */
 }
