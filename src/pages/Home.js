@@ -1,7 +1,9 @@
-// src/pages/Home.js
 import React from "react";
 import "../styles/Home.css";
 import izmirImage from "../assets/izmir.jpeg";
+import EventsAndFestivals from "../components/EventsAndFestivals";
+import RoutePlanner from "../components/RoutePlanner";
+import QuickAccess from "../components/QuickAccess";
 
 function Home() {
   return (
@@ -18,6 +20,18 @@ function Home() {
             sağlar. Harita üzerinde gezilecek yerleri görüntüleyebilir ve her
             bir yer hakkında detaylı bilgi alabilirsiniz.
           </p>
+        </div>
+      </section>
+
+      <section className="additional-sections">
+        <div className="events-and-festivals-section">
+          <EventsAndFestivals />
+        </div>
+        <div className="route-planner-section">
+          <RoutePlanner />
+        </div>
+        <div className="quick-access-section">
+          <QuickAccess />
         </div>
       </section>
     </div>

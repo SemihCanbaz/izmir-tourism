@@ -1,5 +1,5 @@
 .header {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -21,7 +21,8 @@
 }
 
 .logo {
-  height: 60px; /* Logo yüksekliğini ayarlayın */
+  height: 60px;
+  width: auto; /* Logo yüksekliğini ayarlayın */
   margin: 0;
   transform: rotate(-10deg); /* Logoyu yatık yapar */
   transition: transform 0.3s, height 0.3s; /* Geçiş efektleri */

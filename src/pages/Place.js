@@ -1,31 +1,66 @@
-// src/pages/Place.js
-import React, { useEffect, useState } from "react";
-import PlaceList from "../components/PlaceList"; // PlaceList bileşenini içe aktarın
-import "../styles/Place.css"; // Bu sayfa için özel stil dosyanızı oluşturabilirsiniz
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "../styles/Place.css";
 
 function Place() {
-  const [places, setPlaces] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
-  useEffect(() => {
-    fetch("/data/places.json")
-      .then((response) => response.json())
-      .then((data) => setPlaces(data))
-      .catch((error) =>
-        console.error("Veri yüklenirken bir hata oluştu:", error)
-      );
-  }, []);
+  const places = [
+    {
+      id: 1,
+      name: "Efes Antik Kenti",
+      description:
+        "Efes, İzmir'in Selçuk ilçesinde bulunan antik bir Yunan kentidir.",
+      image: require("../assets/Efes.jpeg"),
+    },
+    {
+      id: 2,
+      name: "Saat Kulesi",
+      description: "Konak Meydanı'nda bulunan tarihi bir saat kulesidir.",
+      image: require("../assets/Saatkulesi.jpeg"),
+    },
+    {
+      id: 3,
+      name: "Çeşme Kalesi",
+      description: "Çeşme Kalesi, Çeşme'de yer alan tarihi bir kaledir.",
+      image: require("../assets/CesmeKalesi.jpeg"),
+    },
+    {
+      id: 4,
+      name: "Kadifekale",
+      description:
+        "Kadifekale, İzmir'de yer alan bir antik kale ve tarihi mekandır.",
+      image: require("../assets/KadifeKale.jpeg"),
+    },
+  ];
+
+  const filteredPlaces = places.filter(
+    (place) =>
+      place.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      place.description.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
-    <div className="place-container">
-      <header className="place-header">
-        <h1>İzmir'deki Turistik Yerler</h1>
-        <p>
-          Burada İzmir'deki çeşitli turistik yerleri harita üzerinde
-          görebilirsiniz. Her bir yer hakkında detaylı bilgi almak için harita
-          işaretçilerine tıklayın.
-        </p>
-      </header>
-      <PlaceList places={places} />
+    <div className="place-list">
+      <input
+        type="text"
+        placeholder="Arama yap..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+      {filteredPlaces.map((place) => (
+        <div className="place-item" key={place.id}>
+          <Link to={`/place/${place.id}`}>
+            <div className="map-container">
+              <img src={place.image} alt={place.name} className="map" />
+            </div>
+            <div className="place-info">
+              <h3>{place.name}</h3>
+              <p className="paragraf">{place.description}</p>
+            </div>
+          </Link>
+        </div>
+      ))}
     </div>
   );
 }

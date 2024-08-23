@@ -23,7 +23,6 @@ nav ul li {
 
 nav ul li a {
   color: #fff;
-  text-decoration: none;
 }
 
 h1 {
@@ -54,4 +53,5 @@ ul li {
   padding: 1em;
   background: #f4f4f4;
   margin: 1em 0;
+  text-decoration: none;
 }

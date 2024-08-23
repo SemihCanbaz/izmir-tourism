@@ -1,4 +1,18 @@
-/* src/styles/Map.css */
 .map-container {
+  position: relative;
   margin: 20px 0;
+  border-radius: 15px; /* Köşe yuvarlama */
+  overflow: hidden; /* Harita taşmasını önle */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif bir gölge efekti */
+}
+
+.map {
+  border-radius: 15px; /* Harita kenarlarını yuvarla */
+}
+
+/* Harita üzerinde geçiş efekti */
+.map-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Hover sırasında gölgeyi artır */
+  transform: scale(1.02); /* Hover sırasında haritayı biraz büyüt */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Geçiş efektleri */
 }

@@ -7,7 +7,9 @@ function Header() {
   return (
     <header className="header">
       <div className="header-content">
-        <img src={logoImg} alt="İzmir Turizm Logo" className="logo" />
+        <Link to="/">
+          <img src={logoImg} alt="İzmir Turizm Logo" className="logo" />
+        </Link>
         <nav>
           <ul className="nav-links">
             <li>
@@ -15,6 +17,9 @@ function Header() {
             </li>
             <li>
               <Link to="/place">Turistik Yerler</Link>
+            </li>
+            <li>
+              <Link to="/about">Hakkında</Link>
             </li>
           </ul>
         </nav>

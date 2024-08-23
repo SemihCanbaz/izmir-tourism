@@ -1,20 +1,63 @@
-/* src/styles/PlaceDetail.css */
-.place-detail {
+/* Konteynerin relative konumlandırması */
+.place-detail-container {
+  display: flex;
+  gap: 20px;
   padding: 20px;
-  font-family: Arial, sans-serif;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap; /* Mobil uyumluluk için kırılabilir */
+  position: relative; /* İçerik konumlandırma için */
+  text-decoration: none;
 }
 
-.place-detail h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
+/* Resim Stilleri */
+.place-detail-image {
+  width: 100%;
+  max-width: 500px; /* Maksimum genişlik ayarı */
+  height: auto;
+  border-radius: 15px; /* Kenar yuvarlama */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Gölge efekti */
 }
 
-.place-detail p {
-  font-size: 1.2em;
-  color: #333;
+/* Bilgi Alanı Stilleri */
+.place-detail-info {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 15px; /* Kenar yuvarlama */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+  text-decoration: none;
+}
+
+.place-detail-info h2 {
+  font-size: 32px;
   margin-bottom: 20px;
+  color: #333; /* Başlık rengi */
 }
 
+.place-detail-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #555; /* Açıklama rengi */
+}
+
+.place-detail-info strong {
+  color: #333; /* Konum başlığı rengi */
+}
+
+/* Harita Stilleri */
 .map-container {
-  margin-top: 20px;
+  flex: 1;
+  max-width: 600px; /* Maksimum genişlik ayarı */
+  height: 300px; /* Sabit yükseklik */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px; /* Kenar yuvarlama */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+}
+
+.map-container iframe {
+  border-radius: 15px; /* Kenar yuvarlama */
+  width: 100%;
+  height: 100%; /* Harita yüksekliği */
 }

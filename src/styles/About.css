@@ -1,0 +1,47 @@
+/* src/styles/About.css */
+.about-container {
+  background-image: url("../assets/Efes.jpeg"); /* Arka plan resmi */
+  background-size: cover; /* Resmin tam kaplamasını sağlar */
+  background-position: center;
+  height: 100vh; /* Ekranın tamamını kaplayan yükseklik */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.8); /* Şeffaf beyaz arka plan */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.about-card h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-card p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-info img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.contact-info img:hover {
+  transform: scale(1.1);
+}
